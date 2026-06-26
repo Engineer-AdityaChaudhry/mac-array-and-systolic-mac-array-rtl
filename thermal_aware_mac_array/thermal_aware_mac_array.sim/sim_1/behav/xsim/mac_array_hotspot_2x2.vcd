@@ -1,0 +1,432 @@
+$date
+   Mon Apr  6 17:03:11 2026
+$end
+
+$version
+  2025.2
+  $dumpfile ("mac_array_hotspot_2x2.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_mac_array $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 2 # workload_id [1:0] $end
+$var integer 32 $ i [31:0] $end
+$var integer 32 % j [31:0] $end
+$var integer 32 & c [31:0] $end
+$var integer 32 ' hot_i [31:0] $end
+$var integer 32 ( hot_j [31:0] $end
+$var integer 32 ) HOT_N [31:0] $end
+$scope module dut $end
+$var wire 1 * clk $end
+$var wire 1 + rst $end
+$scope module ROW[0].COL[0].u_mac $end
+$var wire 1 * clk $end
+$var wire 1 + rst $end
+$var wire 1 , en $end
+$var wire 8 - a [31:24] $end
+$var wire 8 . b [31:24] $end
+$var reg 32 / acc_out [127:96] $end
+$var reg 16 0 mult_out [63:48] $end
+$var reg 16 1 activity_count [63:48] $end
+$var reg 16 2 mult [15:0] $end
+$var reg 32 3 mult_ext [31:0] $end
+$var reg 32 4 acc_next [31:0] $end
+$upscope $end
+$scope module ROW[0].COL[1].u_mac $end
+$var wire 1 * clk $end
+$var wire 1 + rst $end
+$var wire 1 5 en $end
+$var wire 8 6 a [23:16] $end
+$var wire 8 7 b [23:16] $end
+$var reg 32 8 acc_out [95:64] $end
+$var reg 16 9 mult_out [47:32] $end
+$var reg 16 : activity_count [47:32] $end
+$var reg 16 ; mult [15:0] $end
+$var reg 32 < mult_ext [31:0] $end
+$var reg 32 = acc_next [31:0] $end
+$upscope $end
+$scope module ROW[1].COL[0].u_mac $end
+$var wire 1 * clk $end
+$var wire 1 + rst $end
+$var wire 1 > en $end
+$var wire 8 ? a [15:8] $end
+$var wire 8 @ b [15:8] $end
+$var reg 32 A acc_out [63:32] $end
+$var reg 16 B mult_out [31:16] $end
+$var reg 16 C activity_count [31:16] $end
+$var reg 16 D mult [15:0] $end
+$var reg 32 E mult_ext [31:0] $end
+$var reg 32 F acc_next [31:0] $end
+$upscope $end
+$scope module ROW[1].COL[1].u_mac $end
+$var wire 1 * clk $end
+$var wire 1 + rst $end
+$var wire 1 G en $end
+$var wire 8 H a [7:0] $end
+$var wire 8 I b [7:0] $end
+$var reg 32 J acc_out [31:0] $end
+$var reg 16 K mult_out [15:0] $end
+$var reg 16 L activity_count [15:0] $end
+$var reg 16 M mult [15:0] $end
+$var reg 32 N mult_ext [31:0] $end
+$var reg 32 O acc_next [31:0] $end
+$upscope $end
+$upscope $end
+$scope task clear_all $end
+$upscope $end
+$scope task reset_dut $end
+$upscope $end
+$scope task hotspot_load $end
+$var integer 32 P cycles [31:0] $end
+$upscope $end
+$scope task print_activity_counts $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+1!
+0"
+b0 #
+b10 $
+b10 %
+bx &
+bx '
+bx (
+bx )
+1*
+1+
+0,
+b0 -
+b0 .
+b0 /
+b0 0
+b0 1
+b0 2
+b0 3
+b0 4
+05
+b0 6
+b0 7
+b0 8
+b0 9
+b0 :
+b0 ;
+b0 <
+b0 =
+0>
+b0 ?
+b0 @
+b0 A
+b0 B
+b0 C
+b0 D
+b0 E
+b0 F
+0G
+b0 H
+b0 I
+b0 J
+b0 K
+b0 L
+b0 M
+b0 N
+b0 O
+bx P
+$end
+
+#25000
+b1 #
+b10 $
+b10 %
+b0 &
+b1 '
+b1 (
+b1 )
+0+
+1,
+b10 -
+b10 .
+b100 0
+b1 1
+b100 2
+b100 3
+b100 4
+05
+b0 6
+b0 7
+0>
+b0 ?
+b0 @
+0G
+b0 H
+b0 I
+b1010 P
+
+#30000
+0!
+0*
+
+#35000
+1!
+b10 $
+b10 %
+b1 &
+b1 '
+b1 (
+1*
+b100 /
+b10 1
+b1000 4
+
+#40000
+0!
+0*
+
+#45000
+1!
+b10 $
+b10 %
+b10 &
+b1 '
+b1 (
+1*
+b1000 /
+b11 1
+b1100 4
+
+#50000
+0!
+0*
+
+#55000
+1!
+b10 $
+b10 %
+b11 &
+b1 '
+b1 (
+1*
+b1100 /
+b100 1
+b10000 4
+
+#60000
+0!
+0*
+
+#65000
+1!
+b10 $
+b10 %
+b100 &
+b1 '
+b1 (
+1*
+b10000 /
+b101 1
+b10100 4
+
+#70000
+0!
+0*
+
+#75000
+1!
+b10 $
+b10 %
+b101 &
+b1 '
+b1 (
+1*
+b10100 /
+b110 1
+b11000 4
+
+#80000
+0!
+0*
+
+#85000
+1!
+b10 $
+b10 %
+b110 &
+b1 '
+b1 (
+1*
+b11000 /
+b111 1
+b11100 4
+
+#90000
+0!
+0*
+
+#95000
+1!
+b10 $
+b10 %
+b111 &
+b1 '
+b1 (
+1*
+b11100 /
+b1000 1
+b100000 4
+
+#100000
+0!
+0*
+
+#105000
+1!
+b10 $
+b10 %
+b1000 &
+b1 '
+b1 (
+1*
+b100000 /
+b1001 1
+b100100 4
+
+#110000
+0!
+0*
+
+#115000
+1!
+b10 $
+b10 %
+b1001 &
+b1 '
+b1 (
+1*
+b100100 /
+b1010 1
+b101000 4
+
+#120000
+0!
+0*
+
+#125000
+1!
+b10 $
+b10 %
+b1010 &
+1*
+0,
+b0 -
+b0 .
+b0 0
+b0 2
+b0 3
+b100100 4
+05
+b0 6
+b0 7
+0>
+b0 ?
+b0 @
+0G
+b0 H
+b0 I
+
+#130000
+0!
+0*
+
+#135000
+1!
+1*
+
+#140000
+0!
+0*
+
+#145000
+1!
+1*
+
+#150000
+0!
+0*
+
+#155000
+1!
+1*
+
+#160000
+0!
+0*
+
+#165000
+1!
+1*
+
+#170000
+0!
+0*
+
+#175000
+1!
+1*
+$dumpoff
+x*
+x+
+bx -
+bx 6
+bx ?
+bx H
+bx .
+bx 7
+bx @
+bx I
+x,
+x5
+x>
+xG
+x!
+x"
+bx /
+bx 8
+bx A
+bx J
+bx 0
+bx 9
+bx B
+bx K
+bx 1
+bx :
+bx C
+bx L
+bx #
+bx $
+bx %
+bx &
+bx '
+bx (
+bx )
+bx 2
+bx 3
+bx 4
+bx ;
+bx <
+bx =
+bx D
+bx E
+bx F
+bx M
+bx N
+bx O
+bx P
+$end
+

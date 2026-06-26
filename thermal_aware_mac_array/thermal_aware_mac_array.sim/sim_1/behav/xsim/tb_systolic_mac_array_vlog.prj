@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../thermal_aware_mac_array.srcs/sources_1/new/systolic_mac_array.sv" \
+"../../../../thermal_aware_mac_array.srcs/sources_1/new/systolic_mac_cell.sv" \
+"../../../../thermal_aware_mac_array.srcs/sim_1/new/tb_systolic_mac_array.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

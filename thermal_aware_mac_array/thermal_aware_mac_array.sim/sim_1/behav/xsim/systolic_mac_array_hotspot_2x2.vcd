@@ -1,0 +1,685 @@
+$date
+   Mon Apr  6 22:22:13 2026
+$end
+
+$version
+  2025.2
+  $dumpfile ("systolic_mac_array_hotspot_2x2.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_systolic_mac_array $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # en $end
+$var reg 2 $ workload_id [1:0] $end
+$var integer 32 % i [31:0] $end
+$var integer 32 & c [31:0] $end
+$var integer 32 ' HOT_N [31:0] $end
+$scope module dut $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var reg 8 + \ROW[0].COL[0].a_in_cell  [7:0] $end
+$var reg 8 , \ROW[0].COL[0].b_in_cell  [7:0] $end
+$var reg 8 - \ROW[0].COL[1].a_in_cell  [7:0] $end
+$var reg 8 . \ROW[0].COL[1].b_in_cell  [7:0] $end
+$var reg 8 / \ROW[1].COL[0].a_in_cell  [7:0] $end
+$var reg 8 0 \ROW[1].COL[0].b_in_cell  [7:0] $end
+$var reg 8 1 \ROW[1].COL[1].a_in_cell  [7:0] $end
+$var reg 8 2 \ROW[1].COL[1].b_in_cell  [7:0] $end
+$scope module ROW[0].COL[0].u_cell $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var wire 8 3 a_in [7:0] $end
+$var wire 8 4 b_in [7:0] $end
+$var reg 8 5 a_out [31:24] $end
+$var reg 8 6 b_out [31:24] $end
+$var reg 32 7 acc_out [127:96] $end
+$var reg 16 8 mult_out [63:48] $end
+$var reg 16 9 activity_count [63:48] $end
+$var reg 16 : mult [15:0] $end
+$var reg 32 ; mult_ext [31:0] $end
+$var reg 32 < acc_next [31:0] $end
+$upscope $end
+$scope module ROW[0].COL[1].u_cell $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var wire 8 = a_in [7:0] $end
+$var wire 8 > b_in [7:0] $end
+$var reg 8 ? a_out [23:16] $end
+$var reg 8 @ b_out [23:16] $end
+$var reg 32 A acc_out [95:64] $end
+$var reg 16 B mult_out [47:32] $end
+$var reg 16 C activity_count [47:32] $end
+$var reg 16 D mult [15:0] $end
+$var reg 32 E mult_ext [31:0] $end
+$var reg 32 F acc_next [31:0] $end
+$upscope $end
+$scope module ROW[1].COL[0].u_cell $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var wire 8 G a_in [7:0] $end
+$var wire 8 H b_in [7:0] $end
+$var reg 8 I a_out [15:8] $end
+$var reg 8 J b_out [15:8] $end
+$var reg 32 K acc_out [63:32] $end
+$var reg 16 L mult_out [31:16] $end
+$var reg 16 M activity_count [31:16] $end
+$var reg 16 N mult [15:0] $end
+$var reg 32 O mult_ext [31:0] $end
+$var reg 32 P acc_next [31:0] $end
+$upscope $end
+$scope module ROW[1].COL[1].u_cell $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var wire 8 Q a_in [7:0] $end
+$var wire 8 R b_in [7:0] $end
+$var reg 8 S a_out [7:0] $end
+$var reg 8 T b_out [7:0] $end
+$var reg 32 U acc_out [31:0] $end
+$var reg 16 V mult_out [15:0] $end
+$var reg 16 W activity_count [15:0] $end
+$var reg 16 X mult [15:0] $end
+$var reg 32 Y mult_ext [31:0] $end
+$var reg 32 Z acc_next [31:0] $end
+$upscope $end
+$upscope $end
+$scope task clear_inputs $end
+$upscope $end
+$scope task reset_dut $end
+$upscope $end
+$scope task hotspot_stream $end
+$var integer 32 [ cycles [31:0] $end
+$upscope $end
+$scope task print_activity_counts $end
+$var integer 32 \ r [31:0] $end
+$var integer 32 ] col [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+1!
+0"
+0#
+b0 $
+b10 %
+bx &
+bx '
+1(
+1)
+0*
+b0 +
+b0 ,
+b0 -
+b0 .
+b0 /
+b0 0
+b0 1
+b0 2
+b0 3
+b0 4
+b0 5
+b0 6
+b0 7
+b0 8
+b0 9
+b0 :
+b0 ;
+b0 <
+b0 =
+b0 >
+b0 ?
+b0 @
+b0 A
+b0 B
+b0 C
+b0 D
+b0 E
+b0 F
+b0 G
+b0 H
+b0 I
+b0 J
+b0 K
+b0 L
+b0 M
+b0 N
+b0 O
+b0 P
+b0 Q
+b0 R
+b0 S
+b0 T
+b0 U
+b0 V
+b0 W
+b0 X
+b0 Y
+b0 Z
+bx [
+bx \
+bx ]
+$end
+
+#25000
+1#
+b1 $
+b1 %
+b0 &
+b1 '
+0)
+1*
+b10 +
+b11 ,
+b10 3
+b11 4
+b110 8
+b110 :
+b110 ;
+b110 <
+b1100 [
+
+#30000
+0!
+0(
+
+#35000
+1!
+1#
+b1 %
+b1 &
+1(
+b11 +
+b100 ,
+b10 -
+b11 0
+b11 3
+b100 4
+b10 5
+b11 6
+b110 7
+b1100 8
+b1 9
+b1100 :
+b1100 ;
+b10010 <
+b10 =
+b11 H
+
+#40000
+0!
+0(
+
+#45000
+1!
+1#
+b1 %
+b10 &
+1(
+b100 +
+b101 ,
+b11 -
+b100 0
+b100 3
+b101 4
+b11 5
+b100 6
+b10010 7
+b10100 8
+b10 9
+b10100 :
+b10100 ;
+b100110 <
+b11 =
+b10 ?
+b1 C
+b100 H
+b11 J
+b1 M
+
+#50000
+0!
+0(
+
+#55000
+1!
+1#
+b1 %
+b11 &
+1(
+b101 +
+b110 ,
+b100 -
+b101 0
+b101 3
+b110 4
+b100 5
+b101 6
+b100110 7
+b11110 8
+b11 9
+b11110 :
+b11110 ;
+b1000100 <
+b100 =
+b11 ?
+b10 C
+b101 H
+b100 J
+b10 M
+
+#60000
+0!
+0(
+
+#65000
+1!
+1#
+b1 %
+b100 &
+1(
+b110 +
+b111 ,
+b101 -
+b110 0
+b110 3
+b111 4
+b101 5
+b110 6
+b1000100 7
+b101010 8
+b100 9
+b101010 :
+b101010 ;
+b1101110 <
+b101 =
+b100 ?
+b11 C
+b110 H
+b101 J
+b11 M
+
+#70000
+0!
+0(
+
+#75000
+1!
+1#
+b1 %
+b101 &
+1(
+b111 +
+b1000 ,
+b110 -
+b111 0
+b111 3
+b1000 4
+b110 5
+b111 6
+b1101110 7
+b111000 8
+b101 9
+b111000 :
+b111000 ;
+b10100110 <
+b110 =
+b101 ?
+b100 C
+b111 H
+b110 J
+b100 M
+
+#80000
+0!
+0(
+
+#85000
+1!
+1#
+b1 %
+b110 &
+1(
+b1000 +
+b1001 ,
+b111 -
+b1000 0
+b1000 3
+b1001 4
+b111 5
+b1000 6
+b10100110 7
+b1001000 8
+b110 9
+b1001000 :
+b1001000 ;
+b11101110 <
+b111 =
+b110 ?
+b101 C
+b1000 H
+b111 J
+b101 M
+
+#90000
+0!
+0(
+
+#95000
+1!
+1#
+b1 %
+b111 &
+1(
+b1001 +
+b1010 ,
+b1000 -
+b1001 0
+b1001 3
+b1010 4
+b1000 5
+b1001 6
+b11101110 7
+b1011010 8
+b111 9
+b1011010 :
+b1011010 ;
+b101001000 <
+b1000 =
+b111 ?
+b110 C
+b1001 H
+b1000 J
+b110 M
+
+#100000
+0!
+0(
+
+#105000
+1!
+1#
+b1 %
+b1000 &
+1(
+b1010 +
+b1011 ,
+b1001 -
+b1010 0
+b1010 3
+b1011 4
+b1001 5
+b1010 6
+b101001000 7
+b1101110 8
+b1000 9
+b1101110 :
+b1101110 ;
+b110110110 <
+b1001 =
+b1000 ?
+b111 C
+b1010 H
+b1001 J
+b111 M
+
+#110000
+0!
+0(
+
+#115000
+1!
+1#
+b1 %
+b1001 &
+1(
+b1011 +
+b1100 ,
+b1010 -
+b1011 0
+b1011 3
+b1100 4
+b1010 5
+b1011 6
+b110110110 7
+b10000100 8
+b1001 9
+b10000100 :
+b10000100 ;
+b1000111010 <
+b1010 =
+b1001 ?
+b1000 C
+b1011 H
+b1010 J
+b1000 M
+
+#120000
+0!
+0(
+
+#125000
+1!
+1#
+b1 %
+b1010 &
+1(
+b1100 +
+b1101 ,
+b1011 -
+b1100 0
+b1100 3
+b1101 4
+b1011 5
+b1100 6
+b1000111010 7
+b10011100 8
+b1010 9
+b10011100 :
+b10011100 ;
+b1011010110 <
+b1011 =
+b1010 ?
+b1001 C
+b1100 H
+b1011 J
+b1001 M
+
+#130000
+0!
+0(
+
+#135000
+1!
+1#
+b1 %
+b1011 &
+1(
+b1101 +
+b1110 ,
+b1100 -
+b1101 0
+b1101 3
+b1110 4
+b1100 5
+b1101 6
+b1011010110 7
+b10110110 8
+b1011 9
+b10110110 :
+b10110110 ;
+b1110001100 <
+b1100 =
+b1011 ?
+b1010 C
+b1101 H
+b1100 J
+b1010 M
+
+#140000
+0!
+0(
+
+#145000
+1!
+1#
+b10 %
+b1100 &
+1(
+b0 +
+b0 ,
+b1101 -
+b1110 0
+b0 3
+b0 4
+b1101 5
+b1110 6
+b1110001100 7
+b0 8
+b1100 9
+b0 :
+b0 ;
+b1110001100 <
+b1101 =
+b1100 ?
+b1011 C
+b1110 H
+b1101 J
+b1011 M
+
+#150000
+0!
+0(
+
+#155000
+1!
+1(
+b0 -
+b0 0
+b0 5
+b0 6
+b0 =
+b1101 ?
+b1100 C
+b0 H
+b1110 J
+b1100 M
+
+#160000
+0!
+0(
+
+#165000
+1!
+1(
+b0 ?
+b0 J
+
+#170000
+0!
+0(
+
+#175000
+1!
+1(
+
+#180000
+0!
+0(
+
+#185000
+1!
+1(
+
+#190000
+0!
+0(
+
+#195000
+1!
+1(
+
+#200000
+0!
+0(
+
+#205000
+1!
+0#
+1(
+b10 \
+b10 ]
+$dumpoff
+x(
+x)
+x*
+bx 3
+bx 4
+bx =
+bx >
+bx G
+bx H
+bx Q
+bx R
+x!
+x"
+x#
+bx 7
+bx A
+bx K
+bx U
+bx 8
+bx B
+bx L
+bx V
+bx 9
+bx C
+bx M
+bx W
+bx $
+bx %
+bx &
+bx '
+bx 5
+bx ?
+bx I
+bx S
+bx 6
+bx @
+bx J
+bx T
+bx +
+bx ,
+bx -
+bx .
+bx /
+bx 0
+bx 1
+bx 2
+bx :
+bx ;
+bx <
+bx D
+bx E
+bx F
+bx N
+bx O
+bx P
+bx X
+bx Y
+bx Z
+bx [
+bx \
+bx ]
+$end
+

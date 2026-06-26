@@ -1,0 +1,28 @@
+Time resolution is 1 ps
+==========================================
+Starting SYSTOLIC MAC array simulation
+N = 16, WORKLOAD = 2
+==========================================
+Starting checkerboard systolic stream
+Activity Counters for N=16, workload_id=2
+6 6 7 7 8 8 9 9 10 10 11 11 12 12 12 12 
+6 6 7 7 8 8 9 9 10 10 11 11 12 12 12 12 
+7 7 6 6 7 7 8 8 9 9 10 10 11 11 12 12 
+7 7 6 6 7 7 8 8 9 9 10 10 11 11 12 12 
+8 8 7 7 6 6 7 7 8 8 9 9 10 10 11 11 
+8 8 7 7 6 6 7 7 8 8 9 9 10 10 11 11 
+9 9 8 8 7 7 6 6 7 7 8 8 9 9 10 10 
+9 9 8 8 7 7 6 6 7 7 8 8 9 9 10 10 
+10 10 9 9 8 8 7 7 6 6 7 7 8 8 9 9 
+10 10 9 9 8 8 7 7 6 6 7 7 8 8 9 9 
+11 11 10 10 9 9 8 8 7 7 6 6 7 7 8 8 
+11 11 10 10 9 9 8 8 7 7 6 6 7 7 8 8 
+12 12 11 11 10 10 9 9 8 8 7 7 6 6 7 7 
+12 12 11 11 10 10 9 9 8 8 7 7 6 6 7 7 
+12 12 12 12 11 11 10 10 9 9 8 8 7 7 6 6 
+12 12 12 12 11 11 10 10 9 9 8 8 7 7 6 6 
+==========================================
+Simulation completed for SYSTOLIC MAC array
+N = 16, WORKLOAD = 2
+==========================================
+$finish called at time : 345 ns : File "C:/Users/SPC/Desktop/VLSI Projects/Thermal Aware MAC Array/thermal_aware_mac_array/thermal_aware_mac_array.srcs/sim_1/new/tb_systolic_mac_array.sv" Line 214

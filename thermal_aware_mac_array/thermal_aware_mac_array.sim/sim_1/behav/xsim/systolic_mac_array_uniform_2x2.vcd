@@ -1,0 +1,1023 @@
+$date
+   Mon Apr  6 22:27:39 2026
+$end
+
+$version
+  2025.2
+  $dumpfile ("systolic_mac_array_uniform_2x2.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_systolic_mac_array $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var reg 1 # en $end
+$var reg 2 $ workload_id [1:0] $end
+$var integer 32 % i [31:0] $end
+$var integer 32 & c [31:0] $end
+$var integer 32 ' HOT_N [31:0] $end
+$scope module dut $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var reg 8 + \ROW[0].COL[0].a_in_cell  [7:0] $end
+$var reg 8 , \ROW[0].COL[0].b_in_cell  [7:0] $end
+$var reg 8 - \ROW[0].COL[1].a_in_cell  [7:0] $end
+$var reg 8 . \ROW[0].COL[1].b_in_cell  [7:0] $end
+$var reg 8 / \ROW[1].COL[0].a_in_cell  [7:0] $end
+$var reg 8 0 \ROW[1].COL[0].b_in_cell  [7:0] $end
+$var reg 8 1 \ROW[1].COL[1].a_in_cell  [7:0] $end
+$var reg 8 2 \ROW[1].COL[1].b_in_cell  [7:0] $end
+$scope module ROW[0].COL[0].u_cell $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var wire 8 3 a_in [7:0] $end
+$var wire 8 4 b_in [7:0] $end
+$var reg 8 5 a_out [31:24] $end
+$var reg 8 6 b_out [31:24] $end
+$var reg 32 7 acc_out [127:96] $end
+$var reg 16 8 mult_out [63:48] $end
+$var reg 16 9 activity_count [63:48] $end
+$var reg 16 : mult [15:0] $end
+$var reg 32 ; mult_ext [31:0] $end
+$var reg 32 < acc_next [31:0] $end
+$upscope $end
+$scope module ROW[0].COL[1].u_cell $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var wire 8 = a_in [7:0] $end
+$var wire 8 > b_in [7:0] $end
+$var reg 8 ? a_out [23:16] $end
+$var reg 8 @ b_out [23:16] $end
+$var reg 32 A acc_out [95:64] $end
+$var reg 16 B mult_out [47:32] $end
+$var reg 16 C activity_count [47:32] $end
+$var reg 16 D mult [15:0] $end
+$var reg 32 E mult_ext [31:0] $end
+$var reg 32 F acc_next [31:0] $end
+$upscope $end
+$scope module ROW[1].COL[0].u_cell $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var wire 8 G a_in [7:0] $end
+$var wire 8 H b_in [7:0] $end
+$var reg 8 I a_out [15:8] $end
+$var reg 8 J b_out [15:8] $end
+$var reg 32 K acc_out [63:32] $end
+$var reg 16 L mult_out [31:16] $end
+$var reg 16 M activity_count [31:16] $end
+$var reg 16 N mult [15:0] $end
+$var reg 32 O mult_ext [31:0] $end
+$var reg 32 P acc_next [31:0] $end
+$upscope $end
+$scope module ROW[1].COL[1].u_cell $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst $end
+$var wire 1 * en $end
+$var wire 8 Q a_in [7:0] $end
+$var wire 8 R b_in [7:0] $end
+$var reg 8 S a_out [7:0] $end
+$var reg 8 T b_out [7:0] $end
+$var reg 32 U acc_out [31:0] $end
+$var reg 16 V mult_out [15:0] $end
+$var reg 16 W activity_count [15:0] $end
+$var reg 16 X mult [15:0] $end
+$var reg 32 Y mult_ext [31:0] $end
+$var reg 32 Z acc_next [31:0] $end
+$upscope $end
+$upscope $end
+$scope task clear_inputs $end
+$upscope $end
+$scope task reset_dut $end
+$upscope $end
+$scope task uniform_stream $end
+$var integer 32 [ cycles [31:0] $end
+$upscope $end
+$scope task print_activity_counts $end
+$var integer 32 \ r [31:0] $end
+$var integer 32 ] col [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+1!
+0"
+0#
+b0 $
+b10 %
+bx &
+bx '
+1(
+1)
+0*
+b0 +
+b0 ,
+b0 -
+b0 .
+b0 /
+b0 0
+b0 1
+b0 2
+b0 3
+b0 4
+b0 5
+b0 6
+b0 7
+b0 8
+b0 9
+b0 :
+b0 ;
+b0 <
+b0 =
+b0 >
+b0 ?
+b0 @
+b0 A
+b0 B
+b0 C
+b0 D
+b0 E
+b0 F
+b0 G
+b0 H
+b0 I
+b0 J
+b0 K
+b0 L
+b0 M
+b0 N
+b0 O
+b0 P
+b0 Q
+b0 R
+b0 S
+b0 T
+b0 U
+b0 V
+b0 W
+b0 X
+b0 Y
+b0 Z
+bx [
+bx \
+bx ]
+$end
+
+#25000
+1#
+b10 %
+b0 &
+0)
+1*
+b1 +
+b10 ,
+b11 .
+b10 /
+b1 3
+b10 4
+b10 8
+b10 :
+b10 ;
+b10 <
+b11 >
+b10 G
+b1100 [
+
+#30000
+0!
+0(
+
+#35000
+1!
+b10 %
+b1 &
+1(
+b10 +
+b11 ,
+b1 -
+b100 .
+b11 /
+b10 0
+b10 1
+b11 2
+b10 3
+b11 4
+b1 5
+b10 6
+b10 7
+b110 8
+b1 9
+b110 :
+b110 ;
+b1000 <
+b1 =
+b100 >
+b11 @
+b100 B
+b1 C
+b100 D
+b100 E
+b100 F
+b11 G
+b10 H
+b10 I
+b110 L
+b1 M
+b110 N
+b110 O
+b110 P
+b10 Q
+b11 R
+b110 V
+b110 X
+b110 Y
+b110 Z
+
+#40000
+0!
+0(
+
+#45000
+1!
+b10 %
+b10 &
+1(
+b11 +
+b100 ,
+b10 -
+b101 .
+b100 /
+b11 0
+b11 1
+b100 2
+b11 3
+b100 4
+b10 5
+b11 6
+b1000 7
+b1100 8
+b10 9
+b1100 :
+b1100 ;
+b10100 <
+b10 =
+b101 >
+b1 ?
+b100 @
+b100 A
+b1010 B
+b10 C
+b1010 D
+b1010 E
+b1110 F
+b100 G
+b11 H
+b11 I
+b10 J
+b110 K
+b1100 L
+b10 M
+b1100 N
+b1100 O
+b10010 P
+b11 Q
+b100 R
+b10 S
+b11 T
+b110 U
+b1100 V
+b1 W
+b1100 X
+b1100 Y
+b10010 Z
+
+#50000
+0!
+0(
+
+#55000
+1!
+b10 %
+b11 &
+1(
+b100 +
+b101 ,
+b11 -
+b110 .
+b101 /
+b100 0
+b100 1
+b101 2
+b100 3
+b101 4
+b11 5
+b100 6
+b10100 7
+b10100 8
+b11 9
+b10100 :
+b10100 ;
+b101000 <
+b11 =
+b110 >
+b10 ?
+b101 @
+b1110 A
+b10010 B
+b11 C
+b10010 D
+b10010 E
+b100000 F
+b101 G
+b100 H
+b100 I
+b11 J
+b10010 K
+b10100 L
+b11 M
+b10100 N
+b10100 O
+b100110 P
+b100 Q
+b101 R
+b11 S
+b100 T
+b10010 U
+b10100 V
+b10 W
+b10100 X
+b10100 Y
+b100110 Z
+
+#60000
+0!
+0(
+
+#65000
+1!
+b10 %
+b100 &
+1(
+b101 +
+b110 ,
+b100 -
+b111 .
+b110 /
+b101 0
+b101 1
+b110 2
+b101 3
+b110 4
+b100 5
+b101 6
+b101000 7
+b11110 8
+b100 9
+b11110 :
+b11110 ;
+b1000110 <
+b100 =
+b111 >
+b11 ?
+b110 @
+b100000 A
+b11100 B
+b100 C
+b11100 D
+b11100 E
+b111100 F
+b110 G
+b101 H
+b101 I
+b100 J
+b100110 K
+b11110 L
+b100 M
+b11110 N
+b11110 O
+b1000100 P
+b101 Q
+b110 R
+b100 S
+b101 T
+b100110 U
+b11110 V
+b11 W
+b11110 X
+b11110 Y
+b1000100 Z
+
+#70000
+0!
+0(
+
+#75000
+1!
+b10 %
+b101 &
+1(
+b110 +
+b111 ,
+b101 -
+b1000 .
+b111 /
+b110 0
+b110 1
+b111 2
+b110 3
+b111 4
+b101 5
+b110 6
+b1000110 7
+b101010 8
+b101 9
+b101010 :
+b101010 ;
+b1110000 <
+b101 =
+b1000 >
+b100 ?
+b111 @
+b111100 A
+b101000 B
+b101 C
+b101000 D
+b101000 E
+b1100100 F
+b111 G
+b110 H
+b110 I
+b101 J
+b1000100 K
+b101010 L
+b101 M
+b101010 N
+b101010 O
+b1101110 P
+b110 Q
+b111 R
+b101 S
+b110 T
+b1000100 U
+b101010 V
+b100 W
+b101010 X
+b101010 Y
+b1101110 Z
+
+#80000
+0!
+0(
+
+#85000
+1!
+b10 %
+b110 &
+1(
+b111 +
+b1000 ,
+b110 -
+b1001 .
+b1000 /
+b111 0
+b111 1
+b1000 2
+b111 3
+b1000 4
+b110 5
+b111 6
+b1110000 7
+b111000 8
+b110 9
+b111000 :
+b111000 ;
+b10101000 <
+b110 =
+b1001 >
+b101 ?
+b1000 @
+b1100100 A
+b110110 B
+b110 C
+b110110 D
+b110110 E
+b10011010 F
+b1000 G
+b111 H
+b111 I
+b110 J
+b1101110 K
+b111000 L
+b110 M
+b111000 N
+b111000 O
+b10100110 P
+b111 Q
+b1000 R
+b110 S
+b111 T
+b1101110 U
+b111000 V
+b101 W
+b111000 X
+b111000 Y
+b10100110 Z
+
+#90000
+0!
+0(
+
+#95000
+1!
+b10 %
+b111 &
+1(
+b1000 +
+b1001 ,
+b111 -
+b1010 .
+b1001 /
+b1000 0
+b1000 1
+b1001 2
+b1000 3
+b1001 4
+b111 5
+b1000 6
+b10101000 7
+b1001000 8
+b111 9
+b1001000 :
+b1001000 ;
+b11110000 <
+b111 =
+b1010 >
+b110 ?
+b1001 @
+b10011010 A
+b1000110 B
+b111 C
+b1000110 D
+b1000110 E
+b11100000 F
+b1001 G
+b1000 H
+b1000 I
+b111 J
+b10100110 K
+b1001000 L
+b111 M
+b1001000 N
+b1001000 O
+b11101110 P
+b1000 Q
+b1001 R
+b111 S
+b1000 T
+b10100110 U
+b1001000 V
+b110 W
+b1001000 X
+b1001000 Y
+b11101110 Z
+
+#100000
+0!
+0(
+
+#105000
+1!
+b10 %
+b1000 &
+1(
+b1001 +
+b1010 ,
+b1000 -
+b1011 .
+b1010 /
+b1001 0
+b1001 1
+b1010 2
+b1001 3
+b1010 4
+b1000 5
+b1001 6
+b11110000 7
+b1011010 8
+b1000 9
+b1011010 :
+b1011010 ;
+b101001010 <
+b1000 =
+b1011 >
+b111 ?
+b1010 @
+b11100000 A
+b1011000 B
+b1000 C
+b1011000 D
+b1011000 E
+b100111000 F
+b1010 G
+b1001 H
+b1001 I
+b1000 J
+b11101110 K
+b1011010 L
+b1000 M
+b1011010 N
+b1011010 O
+b101001000 P
+b1001 Q
+b1010 R
+b1000 S
+b1001 T
+b11101110 U
+b1011010 V
+b111 W
+b1011010 X
+b1011010 Y
+b101001000 Z
+
+#110000
+0!
+0(
+
+#115000
+1!
+b10 %
+b1001 &
+1(
+b1010 +
+b1011 ,
+b1001 -
+b1100 .
+b1011 /
+b1010 0
+b1010 1
+b1011 2
+b1010 3
+b1011 4
+b1001 5
+b1010 6
+b101001010 7
+b1101110 8
+b1001 9
+b1101110 :
+b1101110 ;
+b110111000 <
+b1001 =
+b1100 >
+b1000 ?
+b1011 @
+b100111000 A
+b1101100 B
+b1001 C
+b1101100 D
+b1101100 E
+b110100100 F
+b1011 G
+b1010 H
+b1010 I
+b1001 J
+b101001000 K
+b1101110 L
+b1001 M
+b1101110 N
+b1101110 O
+b110110110 P
+b1010 Q
+b1011 R
+b1001 S
+b1010 T
+b101001000 U
+b1101110 V
+b1000 W
+b1101110 X
+b1101110 Y
+b110110110 Z
+
+#120000
+0!
+0(
+
+#125000
+1!
+b10 %
+b1010 &
+1(
+b1011 +
+b1100 ,
+b1010 -
+b1101 .
+b1100 /
+b1011 0
+b1011 1
+b1100 2
+b1011 3
+b1100 4
+b1010 5
+b1011 6
+b110111000 7
+b10000100 8
+b1010 9
+b10000100 :
+b10000100 ;
+b1000111100 <
+b1010 =
+b1101 >
+b1001 ?
+b1100 @
+b110100100 A
+b10000010 B
+b1010 C
+b10000010 D
+b10000010 E
+b1000100110 F
+b1100 G
+b1011 H
+b1011 I
+b1010 J
+b110110110 K
+b10000100 L
+b1010 M
+b10000100 N
+b10000100 O
+b1000111010 P
+b1011 Q
+b1100 R
+b1010 S
+b1011 T
+b110110110 U
+b10000100 V
+b1001 W
+b10000100 X
+b10000100 Y
+b1000111010 Z
+
+#130000
+0!
+0(
+
+#135000
+1!
+b10 %
+b1011 &
+1(
+b1100 +
+b1101 ,
+b1011 -
+b1110 .
+b1101 /
+b1100 0
+b1100 1
+b1101 2
+b1100 3
+b1101 4
+b1011 5
+b1100 6
+b1000111100 7
+b10011100 8
+b1011 9
+b10011100 :
+b10011100 ;
+b1011011000 <
+b1011 =
+b1110 >
+b1010 ?
+b1101 @
+b1000100110 A
+b10011010 B
+b1011 C
+b10011010 D
+b10011010 E
+b1011000000 F
+b1101 G
+b1100 H
+b1100 I
+b1011 J
+b1000111010 K
+b10011100 L
+b1011 M
+b10011100 N
+b10011100 O
+b1011010110 P
+b1100 Q
+b1101 R
+b1011 S
+b1100 T
+b1000111010 U
+b10011100 V
+b1010 W
+b10011100 X
+b10011100 Y
+b1011010110 Z
+
+#140000
+0!
+0(
+
+#145000
+1!
+1#
+b10 %
+b1100 &
+1(
+b0 +
+b0 ,
+b1100 -
+b0 .
+b0 /
+b1101 0
+b1101 1
+b1110 2
+b0 3
+b0 4
+b1100 5
+b1101 6
+b1011011000 7
+b0 8
+b1100 9
+b0 :
+b0 ;
+b1011011000 <
+b1100 =
+b0 >
+b1011 ?
+b1110 @
+b1011000000 A
+b0 B
+b1100 C
+b0 D
+b0 E
+b1011000000 F
+b0 G
+b1101 H
+b1101 I
+b1100 J
+b1011010110 K
+b0 L
+b1100 M
+b0 N
+b0 O
+b1011010110 P
+b1101 Q
+b1110 R
+b1100 S
+b1101 T
+b1011010110 U
+b10110110 V
+b1011 W
+b10110110 X
+b10110110 Y
+b1110001100 Z
+
+#150000
+0!
+0(
+
+#155000
+1!
+1(
+b0 -
+b0 0
+b0 1
+b0 2
+b0 5
+b0 6
+b0 =
+b1100 ?
+b0 @
+b1101 C
+b0 H
+b0 I
+b1101 J
+b1101 M
+b0 Q
+b0 R
+b1101 S
+b1110 T
+b1110001100 U
+b0 V
+b1100 W
+b0 X
+b0 Y
+
+#160000
+0!
+0(
+
+#165000
+1!
+1(
+b0 ?
+b0 J
+b0 S
+b0 T
+
+#170000
+0!
+0(
+
+#175000
+1!
+1(
+
+#180000
+0!
+0(
+
+#185000
+1!
+1(
+
+#190000
+0!
+0(
+
+#195000
+1!
+1(
+
+#200000
+0!
+0(
+
+#205000
+1!
+0#
+1(
+b10 \
+b10 ]
+$dumpoff
+x(
+x)
+x*
+bx 3
+bx 4
+bx =
+bx >
+bx G
+bx H
+bx Q
+bx R
+x!
+x"
+x#
+bx 7
+bx A
+bx K
+bx U
+bx 8
+bx B
+bx L
+bx V
+bx 9
+bx C
+bx M
+bx W
+bx $
+bx %
+bx &
+bx '
+bx 5
+bx ?
+bx I
+bx S
+bx 6
+bx @
+bx J
+bx T
+bx +
+bx ,
+bx -
+bx .
+bx /
+bx 0
+bx 1
+bx 2
+bx :
+bx ;
+bx <
+bx D
+bx E
+bx F
+bx N
+bx O
+bx P
+bx X
+bx Y
+bx Z
+bx [
+bx \
+bx ]
+$end
+
